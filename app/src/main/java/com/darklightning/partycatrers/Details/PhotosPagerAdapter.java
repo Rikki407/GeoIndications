@@ -1,4 +1,4 @@
-package com.darklightning.partycatrers.Authentication.Details;
+package com.darklightning.partycatrers.Details;
 
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;

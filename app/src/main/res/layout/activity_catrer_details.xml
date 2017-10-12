@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.darklightning.partycatrers.Authentication.Details.CatrerDetailsActivity">
+    tools:context=".Details.CatrerDetailsActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -146,7 +146,8 @@
                             android:layout_weight="0.3"
                             android:text="Price"
                             android:textColor="@color/kp_red"
-                            android:textSize="16sp" />
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -155,17 +156,11 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/ads_detail_rental_amount"
+                                android:id="@+id/product_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="5dp"
-                                android:textColor="@color/cardTextColor"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/ads_detail_rental_option"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
                                 android:textColor="@color/cardTextColor"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -351,6 +346,7 @@
                     android:padding="3dp"
                     android:text="VIEW ALL"
                     android:textColor="@color/cardTextColor"
+                    android:visibility="gone"
                     android:textSize="14sp" />
 
             </LinearLayout>
