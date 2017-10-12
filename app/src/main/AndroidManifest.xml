@@ -22,7 +22,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".Authentication.Details.CatrerDetailsActivity"
+            android:name=".Details.CatrerDetailsActivity"
             android:label="@string/title_activity_catrer_details"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -60,6 +60,10 @@
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Fab.PostAdsDetails"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            </activity>
+        <activity android:name=".Caterers.SayWhatActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             </activity>

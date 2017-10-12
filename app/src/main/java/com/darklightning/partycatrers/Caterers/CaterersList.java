@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class CaterersList extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<CatrersListItems> mCatrersList;
+    public ArrayList<CatrersListItems> mCatrersList;
     CatrersListAdapter mAdapter;
     DatabaseReference mRootRef;
     DatabaseReference mCatrersListRef;

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.darklightning.partycatrers.Caterers.CaterersList;
 
+import com.darklightning.partycatrers.Caterers.MapFragment;
 import com.darklightning.partycatrers.Constants.MyConstants;
 import com.darklightning.partycatrers.Authentication.LoginUser.LoginActivity;
 import com.darklightning.partycatrers.Fab.TakePictureActivity;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = CaterersList.newInstance();
                     break;
                 case R.id.main_map:
+                    fragment = MapFragment.newInstance();
                     break;
             }
             if(fragment!=null)
@@ -164,9 +166,14 @@ public class MainActivity extends AppCompatActivity {
                 uId = user.getUid();
                 Toast.makeText(this, "user id:"+uId+"email:"+userEmailId, Toast.LENGTH_LONG).show();
             }
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+
         navigation.setSelectedItemId(0);
+        android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+
+
+        fragmentTransaction.commit();
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 

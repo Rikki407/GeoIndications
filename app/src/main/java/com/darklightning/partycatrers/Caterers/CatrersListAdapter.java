@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.darklightning.partycatrers.Authentication.Details.CatrerDetailsActivity;
+import com.darklightning.partycatrers.Details.CatrerDetailsActivity;
 import com.darklightning.partycatrers.R;
 import com.squareup.picasso.Picasso;
 
@@ -46,6 +46,8 @@ public class CatrersListAdapter extends RecyclerView.Adapter<CatrersListAdapter.
         holder.catrerEmail = catrersListItems.email;
         holder.catrerNo = catrersListItems.contact_no;
         holder.catrerDetails = catrersListItems.detail;
+        holder.logo_url = catrersListItems.catrers_logo_pic;
+        holder.main_img_url = catrersListItems.main_pic;
         Log.e("crazy","jhg"+catrersListItems.catrers_name);
         Picasso.with(mContext).load(catrersListItems.catrers_logo_pic).into(holder.catrers_logo_pic);
 
@@ -59,7 +61,7 @@ public class CatrersListAdapter extends RecyclerView.Adapter<CatrersListAdapter.
     public class CatrersViewHolder extends RecyclerView.ViewHolder {
         ImageView catrers_logo_pic;
         TextView catrerName,catrerPrice,catrerLocation;
-        String catrerEmail,catrerNo,catrerDetails;
+        String catrerEmail,catrerNo,catrerDetails,logo_url,main_img_url;
         public CatrersViewHolder(View itemView) {
             super(itemView);
             catrers_logo_pic = (ImageView) itemView.findViewById(R.id.catrer_pic);
@@ -77,6 +79,8 @@ public class CatrersListAdapter extends RecyclerView.Adapter<CatrersListAdapter.
                     intent.putExtra("catrerEmail",""+catrerEmail);
                     intent.putExtra("catrerNo",""+catrerNo);
                     intent.putExtra("catrerDetails",""+catrerDetails);
+                    intent.putExtra("logo_url",""+logo_url);
+                    intent.putExtra("main_img_url",""+main_img_url);
                     mContext.startActivity(intent);
                 }
             });
